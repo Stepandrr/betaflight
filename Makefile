@@ -132,7 +132,7 @@ include $(ROOT)/src/main/target/$(TARGET)/target.mk
 
 REVISION := norevision
 ifeq ($(shell git diff --shortstat),)
-REVISION := $(shell git log -1 --format="%h")
+REVISION := $(shell  git rev-parse --short=7 HEAD)
 endif
 
 LD_FLAGS        :=
